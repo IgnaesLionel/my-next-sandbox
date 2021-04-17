@@ -1,18 +1,18 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import ButtonArrow from "../components/ButtonArrow/ButtonArrow";
 import Card from "../ui/Card";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}></main>
+      <main></main>
 
-      <footer className={styles.footer}>
+      <footer>
         <Card>
           <p>
             {" "}
@@ -34,6 +34,17 @@ export default function Home() {
             sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur
             adip
           </p>
+          <ul>
+            <li>
+              <Link href="/portfolio">Portfolio</Link>
+            </li>
+            <li>
+              <Link href="/blog">blog</Link>
+            </li>
+            <li>
+              <Link href="/clients">client</Link>
+            </li>
+          </ul>
           <ButtonArrow buttonName="Clickez ici" />{" "}
           <ButtonArrow buttonName="Clickez ici" />
           <ButtonArrow buttonName="Clickez ici" />
@@ -43,8 +54,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Powered by <img src="/vercel.svg" alt="Vercel Logo" />
         </a>
       </footer>
     </div>
